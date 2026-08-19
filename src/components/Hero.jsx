@@ -10,9 +10,8 @@ import { Link } from "react-router-dom";
 
 import { suggestions } from "../data/constant";
 
-
 const AutoSuggest = (initialValue) => {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const [matchingSuggestions, setMatchingSuggestions] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -40,7 +39,7 @@ const AutoSuggest = (initialValue) => {
     handleInputChange,
     handleSuggestionClick,
   };
-}
+};
 
 const Hero = () => {
   // const navigate = useNavigate();
@@ -68,16 +67,15 @@ const Hero = () => {
     });
   };
 
-  const departureSuggest = AutoSuggest('');
-  const arrivalSuggest = AutoSuggest('');
-  
+  const departureSuggest = AutoSuggest("");
+  const arrivalSuggest = AutoSuggest("");
 
   return (
     <>
       <header className="flex flex-col items-center relative w-full h-[529px] px-7 py-4">
         <div className="flex justify-center items-center">
           <h1 className="font-extrabold text-5xl sm:text-7xl md:text-8xl text-center leading-[55px] sm:leading-[70px] md:leading-[90px] text-gradient">
-            It's more than <br /> just a trip
+            Buscá tus vuelos <br />
           </h1>
         </div>
 
@@ -91,20 +89,21 @@ const Hero = () => {
               onChange={departureSuggest.handleInputChange}
               onFocus={() => departureSuggest.setIsOpen(true)}
               className="uppercase placeholder:capitalize outline-none border-none ml-2 text-base text-[#7C8DB0] placeholder:text-[#7C8DB0] placeholder:text-base placeholder:leading-6"
-             
             />
-           { departureSuggest.isOpen && ( 
-           <ul className="w-[220px] h-56 absolute top-[70px]  bg-white rounded overflow-scroll">
-              {departureSuggest.matchingSuggestions.map((suggestion) => (
-                <li
-                  key={suggestion}
-                  onClick={() => departureSuggest.handleSuggestionClick(suggestion)}
-                  className="uppercase  cursor-pointer hover:bg-[#605DEC] px-3 py-1 text-[#7C8DB0] hover:text-[#F6F6FE]  mt-1"
-                >
-                  {suggestion}
-                </li>
-              ))}
-            </ul>
+            {departureSuggest.isOpen && (
+              <ul className="w-[220px] h-56 absolute top-[70px]  bg-white rounded overflow-scroll">
+                {departureSuggest.matchingSuggestions.map((suggestion) => (
+                  <li
+                    key={suggestion}
+                    onClick={() =>
+                      departureSuggest.handleSuggestionClick(suggestion)
+                    }
+                    className="uppercase  cursor-pointer hover:bg-[#605DEC] px-3 py-1 text-[#7C8DB0] hover:text-[#F6F6FE]  mt-1"
+                  >
+                    {suggestion}
+                  </li>
+                ))}
+              </ul>
             )}
           </div>
 
@@ -114,22 +113,24 @@ const Hero = () => {
               type="text"
               placeholder="Where to?"
               value={arrivalSuggest.input}
-        onChange={arrivalSuggest.handleInputChange}
-        onFocus={() => arrivalSuggest.setIsOpen(true)}
+              onChange={arrivalSuggest.handleInputChange}
+              onFocus={() => arrivalSuggest.setIsOpen(true)}
               className="uppercase placeholder:capitalize outline-none border-none ml-2 text-base text-[#7C8DB0] placeholder:text-[#7C8DB0] placeholder:text-base placeholder:leading-6"
             />
-           { arrivalSuggest.isOpen && (
-            <ul className="w-[220px] h-56 absolute top-[70px] bg-white rounded overflow-scroll">
-              {arrivalSuggest.matchingSuggestions.map((suggestion) => (
-                <li
-                  key={suggestion}
-                  onClick={() => arrivalSuggest.handleSuggestionClick(suggestion)}
-                  className="uppercase cursor-pointer hover:bg-[#605DEC] px-3 py-1 text-[#7C8DB0] hover:text-[#F6F6FE]  mt-1"
-                >
-                  {suggestion}
-                </li>
-              ))}
-            </ul>
+            {arrivalSuggest.isOpen && (
+              <ul className="w-[220px] h-56 absolute top-[70px] bg-white rounded overflow-scroll">
+                {arrivalSuggest.matchingSuggestions.map((suggestion) => (
+                  <li
+                    key={suggestion}
+                    onClick={() =>
+                      arrivalSuggest.handleSuggestionClick(suggestion)
+                    }
+                    className="uppercase cursor-pointer hover:bg-[#605DEC] px-3 py-1 text-[#7C8DB0] hover:text-[#F6F6FE]  mt-1"
+                  >
+                    {suggestion}
+                  </li>
+                ))}
+              </ul>
             )}
           </div>
 
