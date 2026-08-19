@@ -33,6 +33,11 @@ const SelectDetails = () => {
 
   return (
     <>
+      <script
+        async
+        src="https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&locale=en&stops=any&show_hotels=true&powered_by=true&border_radius=0&plain=true&color_button=%235E5E5Eff&color_button_text=%23ffffff&promo_id=3414&campaign_id=111"
+        charset="utf-8"
+      ></script>
       <div className="w-full">
         <div className="lg:w-[872px] w-full flex flex-col gap-10">
           <div className="flex w-full h-12 lg:flex-row items-center flex-col lg:shadowCard  relative ">
