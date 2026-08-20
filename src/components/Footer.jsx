@@ -12,9 +12,11 @@ const Footer = () => {
       <div className="mt-40 flex flex-col gap-5 px-8">
         <div className="flex justify-between items-start flex-col md:flex-row gap-7">
           <div className="flex justify-start items-start">
-            <h1 className="text-[#605DEC] font-bold text-2xl">Trimpa</h1>
+            <h1 className="text-[#605DEC] font-bold text-2xl">
+              Pedro Travel Club
+            </h1>
           </div>
-          <ul className="flex flex-col items-start justify-start gap-3">
+          {/* <ul className="flex flex-col items-start justify-start gap-3">
             <h2 className="text-[#6E7491] font-bold text-lg">About</h2>
             <li className="footerLi">About Tripma</li>
             <li className="footerLi">How it works</li>
@@ -22,7 +24,7 @@ const Footer = () => {
             <li className="footerLi">Blog</li>
             <li className="footerLi">Press</li>
             <li className="footerLi">Forum</li>
-          </ul>
+          </ul> */}
           {/* <ul className="flex flex-col items-start justify-start gap-3 ">
           <h2 className="text-[#6E7491] font-bold text-lg">Partner with us</h2>
           <li className="footerLi">Partnership programs</li>
@@ -35,7 +37,7 @@ const Footer = () => {
         </ul> */}
           <ul className="flex flex-col items-start justify-start gap-3">
             <h2 className="text-[#6E7491] font-bold text-lg">Support</h2>
-            <li className="footerLi">Help Center</li>
+            {/* <li className="footerLi">Help Center</li> */}
             <li className="footerLi">Contact us</li>
             <li className="footerLi">Privacy policy</li>
             <li className="footerLi">Terms of service</li>
@@ -58,11 +60,17 @@ const Footer = () => {
               alt="twitter"
               className="cursor-pointer object-cover w-5 h-5 sm:w-7 sm:h-7"
             /> */}
-            <img
-              src={instagram}
-              alt="twitter"
-              className="cursor-pointer object-cover w-5 h-5 sm:w-7 sm:h-7"
-            />
+            <a
+              href="https://www.instagram.com/pedrstrauch/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={instagram}
+                alt="Instagram"
+                className="cursor-pointer object-cover w-5 h-5 sm:w-7 sm:h-7"
+              />
+            </a>
             {/* <img
               src={facebook}
               alt="twitter"

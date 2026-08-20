@@ -1,4 +1,5 @@
 import { departure, arrival, calendar, person } from "../assets/icons";
+import { useEffect } from "react";
 
 import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
@@ -70,16 +71,58 @@ const Hero = () => {
   const departureSuggest = AutoSuggest("");
   const arrivalSuggest = AutoSuggest("");
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    // const scriptPanel = document.createElement("scriptPanel");
+    script.src =
+      "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2345DE58ff&color_button=%2345DE58FF&color_icons=%2345DE58FF&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C400&color_focused=%2332a8dd&border_radius=13&no_labels=true&plain=true&promo_id=7879&campaign_id=100";
+    // scriptPanel.src =
+    //   "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&destination=MAD&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=true&primary=%230085FF&promo_id=4044&campaign_id=100";
+    script.async = true;
+    script.charset = "utf-8";
+
+    document.getElementById("aviasales-widget").appendChild(script);
+    // document.getElementById("aviasales-widgetII").appendChild(scriptPanel);
+
+    return () => {
+      document.getElementById("aviasales-widget").innerHTML = "";
+      // document.getElementById("aviasales-widgetII").innerHTML = "";
+    };
+  }, []);
+  useEffect(() => {
+    const script = document.createElement("script");
+
+    script.src =
+      "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&searchUrl=www.aviasales.com%2Fsearch&locale=es&powered_by=true&origin=MVD&destination=MAD&one_way=false&only_direct=false&period=year&range=7%2C14&primary=%230C73FE&color_background=%23ffffff&dark=%23000000&light=%23FFFFFF&achieve=%2345AD35&promo_id=4041&campaign_id=100";
+
+    script.async = true;
+    script.charset = "utf-8";
+
+    const container = document.getElementById("aviasales-widget-2");
+
+    if (container) {
+      container.appendChild(script);
+    }
+
+    return () => {
+      if (container) {
+        container.innerHTML = "";
+      }
+    };
+  }, []);
   return (
     <>
       <header className="flex flex-col items-center relative w-full h-[529px] px-7 py-4">
         <div className="flex justify-center items-center">
           <h1 className="font-extrabold text-5xl sm:text-7xl md:text-8xl text-center leading-[55px] sm:leading-[70px] md:leading-[90px] text-gradient">
-            Insipirá tu <br /> próximo viaje acá
+            Tu viaje empieza con los mejores vuelos <br />
           </h1>
         </div>
+        <br />
+        <div id="aviasales-widget"></div>
+        {/* <div id="aviasales-widgetII"></div> */}
 
-        <div className="flex w-full max-w-[1024px] lg:h-[65px] lg:flex-row items-center flex-col mt-20  shadowCard relative ">
+        {/* <div className="flex w-full max-w-[1024px] lg:h-[65px] lg:flex-row items-center flex-col mt-20  shadowCard relative ">
           <div className="flex w-full h-full justify-start items-center border-[1px] border-[#CBD4E6] p-2 lg:rounded-l-[4px] relative">
             <img src={departure} alt="departure" />
             <input
@@ -219,7 +262,7 @@ const Hero = () => {
               Search
             </button>
           </Link>
-        </div>
+        </div> */}
       </header>
     </>
   );
