@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap");
+
 body {
   background-color: #152342;
 
-  background-image: url("/images/travel-bg.jpg");
+  /* background-image: url("src/assets/images/volando mar.jpg"); */
+  background-image: url("src/assets/images/volando mar 2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -43,11 +45,11 @@ body {
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    #31994b 1.23%,
-    #31994b 17.23%,
+    #b3b4b3 1.23%,
+    #b3b4b3 1.23%,
     #343434 42.04%,
-    #31994b 55.23%,
-    #31994b 60.23%,
+    #b3b4b3 1.23%,
+    #b3b4b3 1.23%,
     #7b7b7b 100%
   );
   -webkit-background-clip: text;

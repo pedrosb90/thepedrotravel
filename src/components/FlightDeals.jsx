@@ -14,27 +14,27 @@ const FlightDeals = () => {
     navigate("/packages");
   };
 
-  useEffect(() => {
-    const script = document.createElement("script");
+  // useEffect(() => {
+  //   const script = document.createElement("script");
 
-    script.src =
-      "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&searchUrl=www.aviasales.com%2Fsearch&locale=es&powered_by=true&origin=MVD&destination=MAD&one_way=false&only_direct=false&period=year&range=7%2C14&primary=%230C73FE&color_background=%23ffffff&dark=%23000000&light=%23FFFFFF&achieve=%2345AD35&promo_id=4041&campaign_id=100";
+  //   script.src =
+  //     "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&searchUrl=www.aviasales.com%2Fsearch&locale=es&powered_by=true&origin=MVD&destination=MAD&one_way=false&only_direct=false&period=year&range=7%2C14&primary=%230C73FE&color_background=%23ffffff&dark=%23000000&light=%23FFFFFF&achieve=%2345AD35&promo_id=4041&campaign_id=100";
 
-    script.async = true;
-    script.charset = "utf-8";
+  //   script.async = true;
+  //   script.charset = "utf-8";
 
-    const container = document.getElementById("aviasales-widget-2");
+  //   const container = document.getElementById("aviasales-widget-2");
 
-    if (container) {
-      container.appendChild(script);
-    }
+  //   if (container) {
+  //     container.appendChild(script);
+  //   }
 
-    return () => {
-      if (container) {
-        container.innerHTML = "";
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (container) {
+  //       container.innerHTML = "";
+  //     }
+  //   };
+  // }, []);
 
   return (
     <>
@@ -42,12 +42,11 @@ const FlightDeals = () => {
         <div className="flex items-center justify-between">
           <p className="text-[#6E7491] font-medium md:font-bold sm:text-base md:text-[24px] md:leading-8">
             Aprovechá
-            <br className=" block sm:hidden " /> las mejores tarifas a{" "}
-            <span className="text-[#605DEC]">Europa</span>
+            <br className=" block sm:hidden " /> las mejores{" "}
+            <span className="text-[#605DEC]">tarifas</span>
           </p>
         </div>
-        <br />
-        <div id="aviasales-widget-2"></div>
+        {/* <div id="aviasales-widget-2"></div> */}
       </div>
     </>
   );

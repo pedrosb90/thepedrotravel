@@ -86,7 +86,7 @@ const Navbar = () => {
         {/* Desktop View */}
 
         <div className="hidden md:flex items-center space-x-8">
-          <ul className="hidden md:flex items-center space-x-8 text-[#7C8DB0]">
+          <ul className="hidden md:flex items-center space-x-8 text-[#DCDCDD]">
             <Link
               to="/"
               className={`text-base  hover:text-[#605DEC] transition-all duration-200 ${
