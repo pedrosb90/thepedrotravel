@@ -1,26 +1,25 @@
-import {  kenya, seoul, shangai, sydney, temple } from "../assets/images"
-import { FlightDealsCard } from "../container"
+import { kenya, seoul, shangai, sydney, temple } from "../assets/images";
+import { FlightDealsCard } from "../container";
 
-
-const Packages = () => {
+const Experiencias = () => {
   return (
     <>
-    <div className="px-8 flex flex-col gap-7 mt-10">
-    <div className="flex items-start justify-start">
+      <div className="px-8 flex flex-col gap-7 mt-10">
+        <div className="flex items-start justify-start">
           <p className="text-[#6E7491] font-medium md:font-bold sm:text-base md:text-[24px] md:leading-8">
             Find your next adventure <br className=" block sm:hidden " /> with
             these <span className="text-[#605DEC]">flight deals</span>
           </p>
         </div>
         <div className="flex gap-16 flex-wrap items-start ">
-        <FlightDealsCard
+          <FlightDealsCard
             image={shangai}
             title="The Bund, "
             name="Shanghai"
             price="$598"
             des=" China’s most international city"
           />
-          <FlightDealsCard
+          {/* <FlightDealsCard
             image={sydney}
             title="Sydney Opera House, "
             name="Sydney"
@@ -47,11 +46,11 @@ const Packages = () => {
             name="South Korea"
             price="$589"
             des="This modern city is a traveler’s dream"
-          />
+          /> */}
         </div>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Packages
+export default Experiencias;

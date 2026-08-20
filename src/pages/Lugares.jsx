@@ -1,7 +1,7 @@
 import { bed, holes, maldivs, mongolia, morocco, wall } from "../assets/images";
 import { PlacesCard } from "../container";
 
-const Hotels = () => {
+const Lugares = () => {
   return (
     <>
       <div className=" px-8 flex flex-col gap-7 mt-10">
@@ -51,4 +51,4 @@ const Hotels = () => {
   );
 };
 
-export default Hotels;
+export default Lugares;

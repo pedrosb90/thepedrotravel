@@ -1,75 +1,73 @@
-import { departure, arrival, calendar, person } from "../assets/icons";
 import { useEffect } from "react";
 
-import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { suggestions } from "../data/constant";
 
-const AutoSuggest = (initialValue) => {
-  const [input, setInput] = useState("");
-  const [matchingSuggestions, setMatchingSuggestions] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+// const AutoSuggest = (initialValue) => {
+//   const [input, setInput] = useState("");
+//   const [matchingSuggestions, setMatchingSuggestions] = useState([]);
+//   const [isOpen, setIsOpen] = useState(false);
 
-  const handleInputChange = (event) => {
-    const inputValue = event.target.value.toLowerCase();
-    setInput(inputValue);
+// const handleInputChange = (event) => {
+//   const inputValue = event.target.value.toLowerCase();
+//   setInput(inputValue);
 
-    const filteredSuggestions = suggestions.filter((suggestion) =>
-      suggestion.toLowerCase().startsWith(inputValue)
-    );
-    setMatchingSuggestions(filteredSuggestions);
-  };
+//   const filteredSuggestions = suggestions.filter((suggestion) =>
+//     suggestion.toLowerCase().startsWith(inputValue)
+//   );
+//   setMatchingSuggestions(filteredSuggestions);
+// };
 
-  const handleSuggestionClick = (suggestion) => {
-    setInput(suggestion);
-    setIsOpen(false);
-  };
+// const handleSuggestionClick = (suggestion) => {
+//   setInput(suggestion);
+//   setIsOpen(false);
+// };
 
-  return {
-    input,
-    matchingSuggestions,
-    isOpen,
-    setInput,
-    setIsOpen,
-    handleInputChange,
-    handleSuggestionClick,
-  };
-};
+//   return {
+//     input,
+//     matchingSuggestions,
+//     isOpen,
+//     setInput,
+//     setIsOpen,
+//     handleInputChange,
+//     handleSuggestionClick,
+//   };
+// };
 
-const Hero = () => {
+const Start = () => {
   // const navigate = useNavigate();
-  const [openDate, setOpenDate] = useState(false);
-  const [date, setDate] = useState([
-    {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: "selection",
-    },
-  ]);
+  // const [openDate, setOpenDate] = useState(false);
+  // const [date, setDate] = useState([
+  //   {
+  //     startDate: new Date(),
+  //     endDate: new Date(),
+  //     key: "selection",
+  //   },
+  // ]);
 
-  const [openOptions, setOpenOptions] = useState(false);
-  const [options, setOptions] = useState({
-    adult: 1,
-    minor: 0,
-  });
+  // const [openOptions, setOpenOptions] = useState(false);
+  // const [options, setOptions] = useState({
+  //   adult: 1,
+  //   minor: 0,
+  // });
 
-  const handleOptions = (name, oparetion) => {
-    setOptions((prev) => {
-      return {
-        ...prev,
-        [name]: oparetion === "i" ? options[name] + 1 : options[name] - 1,
-      };
-    });
-  };
+  // const handleOptions = (name, oparetion) => {
+  //   setOptions((prev) => {
+  //     return {
+  //       ...prev,
+  //       [name]: oparetion === "i" ? options[name] + 1 : options[name] - 1,
+  //     };
+  //   });
+  // };
 
-  const departureSuggest = AutoSuggest("");
-  const arrivalSuggest = AutoSuggest("");
+  // const departureSuggest = AutoSuggest("");
+  // const arrivalSuggest = AutoSuggest("");
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -247,6 +245,6 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Start;
 
 //git push -u origin main

@@ -1,6 +1,5 @@
-import Flights from "./Flights";
-import Hotels from "./Hotels";
-import Packages from "./Packages";
-import FlightExplore from "./FlightExplore";
+import Vuelos from "./Vuelos";
+import Lugares from "./Lugares";
+import Experiencias from "./Experiencias";
 
-export { Flights, Hotels, Packages, FlightExplore };
+export { Vuelos, Lugares, Experiencias };

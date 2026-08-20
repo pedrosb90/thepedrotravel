@@ -1,24 +1,24 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import { Footer, Navbar } from "./components";
-import { Flights, Hotels, Packages } from "./pages";
+import { Vuelos, Lugares, Experiencias } from "./pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
+  const location = useLocation();
+
+  console.log("RUTA ACTUAL:", location.pathname);
+
   return (
     <>
       <div className="font-Nunito overflow-hidden max-w-[1440px] mx-auto">
         <Navbar />
+
         <Routes>
-          <Route path="/" element={<Flights />} />
-          <Route path="/lugares" element={<Hotels />} />
-          <Route path="/experiencias" element={<Packages />} />
-          {/* <Route path="/explore" element={<FlightExplore />} /> */}
-          {/* <Route path="/passenger-info" element={<PassengerInfo />} />
-          <Route path="/seat-selection" element={<SeatSelect />} /> */}
-          {/* <Route path="/payment" element={<Payment />} /> */}
-          {/* <Route path="/confirm" element={<Confirm />} /> */}
+          <Route path="/" element={<Vuelos />} />
+          <Route path="/lugares" element={<Lugares />} />
+          <Route path="/experiencias" element={<Experiencias />} />
         </Routes>
         <Footer />
         <ToastContainer

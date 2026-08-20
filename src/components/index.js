@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Hero from "./Hero";
+import Start from "./Start";
 import FlightDeals from "./FlightDeals";
 import Testimonials from "./Testimonials";
 import SelectDetails from "./SelectDetails";
@@ -10,7 +10,7 @@ import FlightChoose from "./FlightChoose";
 export {
   Navbar,
   Footer,
-  Hero,
+  Start,
   FlightDeals,
   SelectDetails,
   Testimonials,

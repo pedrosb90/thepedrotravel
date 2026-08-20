@@ -1,11 +1,11 @@
-import { FlightDeals, Hero, Testimonials } from "../components";
+import { FlightDeals, Start, Testimonials } from "../components";
 import Places from "../components/Places";
 
-const Flights = () => {
+const Vuelos = () => {
   return (
     <>
       <div className="mt-[70px]">
-        <Hero />
+        <Start />
       </div>
       <div className="mt-[40px]">
         <FlightDeals />
@@ -20,4 +20,4 @@ const Flights = () => {
   );
 };
 
-export default Flights;
+export default Vuelos;

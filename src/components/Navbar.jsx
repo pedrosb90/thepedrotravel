@@ -52,6 +52,7 @@ const Navbar = () => {
                 >
                   <li>Lugares</li>
                 </Link>
+
                 <Link
                   to="/experiencias"
                   className={`text-base hover:text-[#605DEC] transition-all duration-200 ${
