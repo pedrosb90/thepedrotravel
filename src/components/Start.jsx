@@ -69,24 +69,47 @@ const Start = () => {
   // const departureSuggest = AutoSuggest("");
   // const arrivalSuggest = AutoSuggest("");
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    // const scriptPanel = document.createElement("scriptPanel");
-    script.src =
-      "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2345DE58ff&color_button=%2345DE58FF&color_icons=%2345DE58FF&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C400&color_focused=%2332a8dd&border_radius=13&no_labels=true&plain=true&promo_id=7879&campaign_id=100";
-    // scriptPanel.src =
-    //   "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&destination=MAD&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=true&primary=%230085FF&promo_id=4044&campaign_id=100";
-    script.async = true;
-    script.charset = "utf-8";
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   // const scriptPanel = document.createElement("scriptPanel");
+  //   script.src =
+  //     "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2345DE58ff&color_button=%2345DE58FF&color_icons=%2345DE58FF&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C400&color_focused=%2332a8dd&border_radius=13&no_labels=true&plain=true&promo_id=7879&campaign_id=100";
+  //   // scriptPanel.src =
+  //   //   "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&destination=MAD&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=true&primary=%230085FF&promo_id=4044&campaign_id=100";
+  //   script.async = true;
+  //   script.charset = "utf-8";
 
-    document.getElementById("aviasales-widget").appendChild(script);
-    // document.getElementById("aviasales-widgetII").appendChild(scriptPanel);
+  //   document.getElementById("aviasales-widget").appendChild(script);
+  //   // document.getElementById("aviasales-widgetII").appendChild(scriptPanel);
 
-    return () => {
-      document.getElementById("aviasales-widget").innerHTML = "";
-      // document.getElementById("aviasales-widgetII").innerHTML = "";
-    };
-  }, []);
+  //   return () => {
+  //     document.getElementById("aviasales-widget").innerHTML = "";
+  //     // document.getElementById("aviasales-widgetII").innerHTML = "";
+  //   };
+  // }, []);
+  const AviasalesWidget = () => {
+    useEffect(() => {
+      const container = document.getElementById("aviasales-widget");
+
+      if (!container) return;
+
+      const script = document.createElement("script");
+
+      script.src =
+        "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2345DE58ff&color_button=%2345DE58FF&color_icons=%2345DE58FF&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C400&color_focused=%2332a8dd&border_radius=13&no_labels=true&plain=true&promo_id=7879&campaign_id=100";
+
+      script.async = true;
+      script.charset = "utf-8";
+
+      container.appendChild(script);
+
+      return () => {
+        script.remove();
+      };
+    }, []);
+
+    return <div id="aviasales-widget" />;
+  };
   return (
     <>
       <header className="flex flex-col items-center relative w-full h-[529px] px-7 py-4">
@@ -96,9 +119,7 @@ const Start = () => {
           </h1>
         </div>
         <br />
-        <div id="aviasales-widget"></div>
-        {/* <div id="aviasales-widgetII"></div> */}
-
+        <AviasalesWidget />
         {/* <div className="flex w-full max-w-[1024px] lg:h-[65px] lg:flex-row items-center flex-col mt-20  shadowCard relative ">
           <div className="flex w-full h-full justify-start items-center border-[1px] border-[#CBD4E6] p-2 lg:rounded-l-[4px] relative">
             <img src={departure} alt="departure" />
