@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Footer, Navbar } from "./components";
-import { FlightExplore, Flights, Hotels, Packages } from "./pages";
+import { Flights, Hotels, Packages } from "./pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

@@ -18,7 +18,7 @@ const Hotels = () => {
             name="Maldives"
             desc="From the 2nd century AD, the islands were known as the 'Money Isles' due to the abundance of cowry shells, a currency of the early ages."
           />
-          <PlacesCard
+          {/* <PlacesCard
             image={morocco}
             title="Experience the Ourika Valley in"
             name="Morocco"
@@ -44,7 +44,7 @@ const Hotels = () => {
             image={holes}
             name="9 Hours Shinjuku"
             desc="Experience a truly unique stay in an authentic Japanese capsule hotel. 9 Hours Shinjuku is minutes from one of Japan’s busiest train stations. Just take the NEX train from Narita airport!"
-          />
+          /> */}
         </div>
       </div>
     </>
