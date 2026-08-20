@@ -58,6 +58,13 @@ const Start = () => {
             Tu viaje empieza con los mejores vuelos <br />
           </h1>
         </div>
+        <div className="flex items-center justify-between pt-9">
+          <p className="text-[#6E7491] font-medium md:font-bold sm:text-base md:text-[24px] md:leading-8">
+            Aprovechá
+            <br className=" block sm:hidden " /> las mejores{" "}
+            <span className="text-[#605DEC]">tarifas</span>
+          </p>
+        </div>
       </header>
       <KiwiWidget />
     </div>
