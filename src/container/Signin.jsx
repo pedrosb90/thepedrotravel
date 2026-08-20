@@ -5,37 +5,36 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 // eslint-disable-next-line react/prop-types
-const Signin = ({signin, setSignin}) => {
+const Signin = ({ signin, setSignin }) => {
   const navigate = useNavigate();
 
-  const[email, setEmail] = useState('')
-  const[password, setPassword] = useState('')
-  const[check1, setCheck1] = useState(false)
-  const[check2, setCheck2] = useState(false)
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [check1, setCheck1] = useState(false);
+  const [check2, setCheck2] = useState(false);
 
   const submitInputs = (e) => {
-     e.preventDefault();
+    e.preventDefault();
 
-     if (email.trim() !== '' && password.trim() !== ''){
+    if (email.trim() !== "" && password.trim() !== "") {
       if (check1 && check2) {
-        toast.success("Sign in successful")
-        navigate('/') 
-        setSignin(false)
+        toast.success("Sign in successful");
+        navigate("/");
+        setSignin(false);
       } else {
-       toast.warning("Please check the checkboxes")
+        toast.warning("Please check the checkboxes");
       }
-     } else {
-       toast.warning("Please fill the details")
-      }
-    
-  }
+    } else {
+      toast.warning("Please fill the details");
+    }
+  };
 
   return (
     <div className="absolute top-36 right-0 left-0 m-auto z-20 bg-[#FFFFFF] shadowCard w-[310px] sm:w-[468px] md:w-[568px] rounded px-8 py-6 flex flex-col  gap-6 scaleUp">
       <header className="flex flex-col justify-start">
         <div className="flex items-center justify-between">
           <h1 className="text-[#6E7491] text-[20px] sm:text-[24px] leading-5 sm:leading-8 font-bold ">
-            Sign up for Tripma
+            Registrarse al Pedro Travel Club
           </h1>
           <MdOutlineClose
             className="text-[#6E7491] cursor-pointer"
@@ -43,8 +42,8 @@ const Signin = ({signin, setSignin}) => {
           />
         </div>
         <p className=" text-sm sm:text-[18px] leading-4 sm:leading-6 text-[#7C8DB0] mt-2">
-          Tripma is totally free to use. Sign up using your email address or
-          phone number below to get started.
+          Pedro Travel Club es totalmente gratis. Registrate con tu email o
+          número de telefono.
         </p>
       </header>
       <form className="flex flex-col gap-4">
@@ -73,9 +72,12 @@ const Signin = ({signin, setSignin}) => {
             onChange={(e) => setCheck1(e.target.checked)}
             className="text-[#7C8DB0] outline-none"
           />
-          <label htmlFor="checkbox" className="text-[#7C8DB0] text-sm sm:text-base">
-            I agree to the{" "}
-            <span className="text-[#605DEC]">terms and conditions</span>
+          <label
+            htmlFor="checkbox"
+            className="text-[#7C8DB0] text-sm sm:text-base"
+          >
+            Acepto{" "}
+            <span className="text-[#605DEC]">términos y condiciones</span>
           </label>
         </form>
         <form className="flex items-center gap-2 ">
@@ -87,8 +89,11 @@ const Signin = ({signin, setSignin}) => {
             onChange={(e) => setCheck2(e.target.checked)}
             className="text-[#7C8DB0] outline-none "
           />
-          <label htmlFor="checkbox" className="text-[#7C8DB0] text-sm sm:text-base">
-            Send me the latest deal alerts
+          <label
+            htmlFor="checkbox"
+            className="text-[#7C8DB0] text-sm sm:text-base"
+          >
+            Eviarme promociones y alertas.
           </label>
         </form>
       </div>
@@ -97,12 +102,12 @@ const Signin = ({signin, setSignin}) => {
           className="w-full bg-[#605DEC] text-[#FAFAFA] rounded py-3 outline-none border-none"
           onClick={submitInputs}
         >
-          Create Account
+          Crear cuenta
         </button>
       </div>
       <div className="flex items-center justify-center gap-2">
         <div className="w-full text-[#A1B0CC] border-t-[1px] border-t-[#A1B0CC] h-1 " />
-        <p className="text-[#7C8DB0] text-[18px] leading-6">or</p>
+        <p className="text-[#7C8DB0] text-[18px] leading-6">o</p>
         <div className="w-full text-[#A1B0CC] border-t-[1px] border-t-[#A1B0CC] h-1" />
       </div>
       <div className="w-full flex items-center justify-center">
@@ -112,7 +117,7 @@ const Signin = ({signin, setSignin}) => {
         >
           <FcGoogle className="w-[18px] h-[18px]" />
           <p className="text-[#605CDE] text-[16px] leading-6">
-            Continue with Google
+            Continuar con Google
           </p>
         </button>
       </div>

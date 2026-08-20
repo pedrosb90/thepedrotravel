@@ -42,28 +42,30 @@ const Navbar = () => {
                     loactionPath("/") && "text-[#605DEC]"
                   }`}
                 >
-                  <li>Flights</li>
+                  <li>Vuelos</li>
                 </Link>
                 <Link
-                  to="/hotels"
+                  to="/lugares"
                   className={`text-base hover:text-[#605DEC] transition-all duration-200 ${
-                    loactionPath("/hotels") && "text-[#605DEC]"
+                    loactionPath("/lugares") && "text-[#605DEC]"
                   }`}
                 >
-                  <li>Hotels</li>
+                  <li>Lugares</li>
                 </Link>
                 <Link
-                  to="/packages"
+                  to="/experiencias"
                   className={`text-base hover:text-[#605DEC] transition-all duration-200 ${
-                    loactionPath("/packages") && "text-[#605DEC]"
+                    loactionPath("/experiencias") && "text-[#605DEC]"
                   }`}
                 >
-                  <li>Packages</li>
+                  <li>Experiencias</li>
                 </Link>
               </ul>
             )}
           </div>
-          <h2>PedroTravelClub</h2>
+          <h2 className="text-white font-extrabold text-xl sm:text-2xl tracking-tight">
+            PedroTravelClub
+          </h2>{" "}
           {/* <img
             src={pedrotravel}
             alt="pedrotravel"
@@ -75,7 +77,7 @@ const Navbar = () => {
             className="block md:hidden bg-[#605DEC] py-2 px-4 md:py-3 md:px-5 rounded-[5px] border-2 border-[#605DEC] text-base text-[#FAFAFA] hover:text-[#605DEC] hover:bg-white hover:border-2 hover:border-[#605DEC] transition-all duration-200"
             onClick={() => setSignin(!signin)}
           >
-            Sign up
+            Registrarme
           </button>
           {signin && <Signin signin={signin} setSignin={setSignin} />}
         </div>
@@ -90,32 +92,32 @@ const Navbar = () => {
                 loactionPath("/") && "text-[#605DEC]"
               }`}
             >
-              <li>Flights</li>
+              <li>Vuelos</li>
             </Link>
             <Link
-              to="/hotels"
+              to="/lugares"
               className={`text-base hover:text-[#605DEC] transition-all duration-200 ${
-                loactionPath("/hotels") && "text-[#605DEC]"
+                loactionPath("/lugares") && "text-[#605DEC]"
               }`}
             >
-              <li>Places</li>
+              <li>Lugares</li>
             </Link>
             <Link
-              to="/packages"
+              to="/experiencias"
               className={`text-base hover:text-[#605DEC] transition-all duration-200 ${
-                loactionPath("/packages") && "text-[#605DEC]"
+                loactionPath("/experiencias") && "text-[#605DEC]"
               }`}
             >
-              <li>Packages</li>
+              <li>Experiencias</li>
             </Link>
           </ul>
           <div className="">
-            <button
+            {/* <button
               className="bg-[#605DEC] py-2 px-4 md:py-3 md:px-5 rounded-[5px] border-2 border-[#605DEC] text-base text-[#FAFAFA] hover:text-[#605DEC] hover:bg-white hover:border-2 hover:border-[#605DEC] transition-all duration-200"
               onClick={() => setSignin(!signin)}
             >
-              Sign up
-            </button>
+              Registrarme
+            </button> */}
             {signin && <Signin signin={signin} setSignin={setSignin} />}
           </div>
         </div>

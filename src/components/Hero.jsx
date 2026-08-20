@@ -89,27 +89,6 @@ const Hero = () => {
       // document.getElementById("aviasales-widgetII").innerHTML = "";
     };
   }, []);
-  useEffect(() => {
-    const script = document.createElement("script");
-
-    script.src =
-      "https://tpwdgt.com/content?currency=usd&trs=564123&shmarker=763679&searchUrl=www.aviasales.com%2Fsearch&locale=es&powered_by=true&origin=MVD&destination=MAD&one_way=false&only_direct=false&period=year&range=7%2C14&primary=%230C73FE&color_background=%23ffffff&dark=%23000000&light=%23FFFFFF&achieve=%2345AD35&promo_id=4041&campaign_id=100";
-
-    script.async = true;
-    script.charset = "utf-8";
-
-    const container = document.getElementById("aviasales-widget-2");
-
-    if (container) {
-      container.appendChild(script);
-    }
-
-    return () => {
-      if (container) {
-        container.innerHTML = "";
-      }
-    };
-  }, []);
   return (
     <>
       <header className="flex flex-col items-center relative w-full h-[529px] px-7 py-4">

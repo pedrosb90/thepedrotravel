@@ -5,16 +5,15 @@ import FlightDeals from "./FlightDeals";
 import Testimonials from "./Testimonials";
 import SelectDetails from "./SelectDetails";
 import FlightChoose from "./FlightChoose";
-import ConfirmShop from "./ConfirmShop";
-
+// import ConfirmShop from "./ConfirmShop";
 
 export {
-    Navbar,
-    Footer,
-    Hero,
-    FlightDeals,
-    SelectDetails,
-    Testimonials,
-    FlightChoose,
-    ConfirmShop
-}
+  Navbar,
+  Footer,
+  Hero,
+  FlightDeals,
+  SelectDetails,
+  Testimonials,
+  FlightChoose,
+  // ConfirmShop
+};
