@@ -4,7 +4,7 @@ body {
   background-color: #152342;
 
   /* background-image: url("src/assets/images/volando mar.jpg"); */
-  background-image: url("public/volando mar 2.jpg");
+  background-image: url("/volando mar 2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
